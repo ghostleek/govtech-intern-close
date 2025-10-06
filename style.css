@@ -1,0 +1,148 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background-color: #000;
+    color: #fff;
+    min-height: 100vh;
+    overflow-x: hidden;
+    padding-top: 60px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    min-height: calc(100vh - 60px);
+    padding: 20px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.content {
+    text-align: center;
+    max-width: 90vw;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+}
+
+.title {
+    font-size: clamp(3rem, 12vw, 8rem);
+    font-weight: 900;
+    line-height: 0.9;
+    margin-bottom: 1rem;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+}
+
+.subtitle {
+    font-size: clamp(1.5rem, 6vw, 3rem);
+    font-weight: 700;
+    margin-bottom: 2rem;
+    color: #ccc;
+    line-height: 1.1;
+}
+
+.banner {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 0.8rem 1rem;
+    background-color: #111;
+    border-bottom: 1px solid #333;
+    z-index: 1000;
+    backdrop-filter: blur(10px);
+}
+
+.banner p {
+    font-size: clamp(0.9rem, 2.5vw, 1.1rem);
+    font-weight: 400;
+    color: #ccc;
+    line-height: 1.4;
+}
+
+.banner a {
+    color: #fff;
+    text-decoration: underline;
+}
+
+.banner a:hover {
+    color: #ccc;
+}
+
+.footer {
+    width: 100%;
+    padding: 2rem 0;
+    display: flex;
+    justify-content: center;
+}
+
+.social-links {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.social-link {
+    color: #fff;
+    text-decoration: none;
+    font-size: clamp(0.8rem, 2.5vw, 1rem);
+    font-weight: 700;
+    padding: 0.6rem 1.2rem;
+    border: 1px solid #fff;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.social-link:hover {
+    background-color: #fff;
+    color: #000;
+    transform: translateY(-2px);
+}
+
+/* Mobile optimizations */
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
+
+    .title {
+        margin-bottom: 0.8rem;
+    }
+
+    .subtitle {
+        margin-bottom: 2.5rem;
+    }
+
+    .social-links {
+        gap: 1rem;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .social-link {
+        padding: 0.8rem 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .social-links {
+        gap: 1rem;
+    }
+
+    .social-link {
+        padding: 0.7rem 1rem;
+        font-size: clamp(0.7rem, 2vw, 0.9rem);
+    }
+}
